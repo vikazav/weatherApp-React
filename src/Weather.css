@@ -1,0 +1,71 @@
+.wrapper {
+   margin: 0 auto;
+   max-width: 700px;
+}
+.app-weather {
+   border: 1px solid #dadde1;
+   border-radius:5px;
+   background-color: #FFFCF6;
+   padding: 30px;
+}
+
+/* .btn-search {
+   width: 45%;
+} */
+.btn-search:hover {
+   background-color: #175baf;
+}
+ul {
+   list-style: none;
+}
+/* .current {
+   width: 45%;
+}
+.current:hover {
+   background-color: #1b5709;
+} */
+
+.min-temp {
+   opacity: .6;
+}
+.card-body {
+   background-color: #88D1CC;
+}
+.city {
+   color:#3084eb;
+   font-size: 56px;
+}
+.description {
+   color:#3084eb;
+   font-size: 50px;
+}
+.temp {
+   color:#2a948d;
+   font-size: 60px;
+}
+
+.city-block {
+   border: 2px solid #4ea6a0;
+   border-radius: 5px;
+}
+.item {
+   align-items: center;
+}
+.oblique {
+   font-size: 20px;
+}
+.temp-icon, .oblique {
+   text-decoration:none;
+  vertical-align: super;
+ 
+}
+.temp-icon:hover {
+   text-decoration: underline;
+}
+.active-link {
+   color:black;
+}
+.active-link:hover {
+text-decoration: none;
+cursor:default;
+}
