@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+
+import WeatherData from "./WeatherData";
 export default function Weather(props) {
    const [city, setCity] = useState(props.defaultCity);
 const [weatherData, setWeatherData] = useState({});
@@ -48,7 +49,7 @@ if (loaded) {
          <form className="pb-3" onSubmit={handleSubmit}>
             <div className="row">
                <div className="col-9">
-            <input type="text" className="input form-control" placeholder="Enter a city" onChange={handleChange}/>
+            <input type="text" className="input form-control" placeholder="Enter a city" autoFocus ="on" onChange={handleChange}/>
             </div>
             <div className="col-3">
             <input className="btn btn-primary btn-search" type="submit" value="Search" />
@@ -71,26 +72,8 @@ if (loaded) {
             </li>
           </ul>
           </nav>
-        
-          <div className="row p-4 d-flex mb-5">
-            <div className="col-md-6 text-center p-4 city-block">
-              <div className="col-md-12">
-               <h1 className="mb-5 city">{city}</h1>
-               <FormattedDate date={weatherData.date}/>
-                </div>
-            </div>
-            <div className="col-md-6 p-4 ps-5 text-start">
-              
-<img className = "icon" src ={weatherData.icon} alt="weather icon"  width="100"></img>
-                  <div>
-                    <span className="temp">{Math.round(weatherData.temperature)}</span>
-                    <a href="/" className ="temp-icon temp-cels active-link">&#176;C   </a> <span className="oblique">   | </span><a href="/" className ="temp-icon temp-fareng">&#176;F </a>
-                    </div>
-                  <div className="row ms-1 description">{weatherData.description}</div>
-                  <p >Humidity: <span className="humidity">{weatherData.humidity}</span>%</p>
-                  <p >Wind: <span className="wind">{weatherData.wind}</span> m/s</p>
-                  </div>
-               </div>
+        <WeatherData data = {weatherData} />
+          
        
       </div>
    </div>
