@@ -7,6 +7,7 @@ function App() {
     <div className="App">
    
   <Weather defaultCity = 'Kyiv'/>
+  <p><a href ="https://github.com/vikazav/weatherApp-React">Open-source</a> code, by Viktoriia Zavertaliuk</p>
     </div>
   );
 }
