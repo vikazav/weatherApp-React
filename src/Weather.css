@@ -38,10 +38,12 @@ ul {
 .description {
    color:#3084eb;
    font-size: 50px;
+   margin-bottom: 20px;
 }
 .temp {
    color:#2a948d;
    font-size: 60px;
+   margin: 0px 5px 0px 0px;
 }
 
 .city-block {
@@ -51,12 +53,12 @@ ul {
 .item {
    align-items: center;
 }
-.oblique {
-   font-size: 20px;
-}
+
 .temp-icon, .oblique {
+   font-size: 16px;
    text-decoration:none;
-  vertical-align: super;
+   position: relative;
+   top: -28px;
  
 }
 .temp-icon:hover {
