@@ -1,0 +1,12 @@
+.ForecastDay {
+   padding: 10px 14px;
+}
+
+
+.forecast-day {
+   font-weight: bold;
+   margin-bottom: 14px;
+}
+.tempMax {
+   margin-top: 14px;
+}

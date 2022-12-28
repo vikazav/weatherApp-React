@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./Weather.css";
 
 import WeatherData from "./WeatherData";
+import ForecastWeather from "./ForecastWeather";
 
 export default function Weather(props) {
    const [city, setCity] = useState(props.defaultCity);
@@ -11,9 +12,11 @@ const [loaded,setLoaded]= useState(false);
 
 
 function handleResponse(response) {
+   // console.log(response.data);
    setLoaded(true);
    
    setWeatherData({
+      coordinates: response.data.coord,
       temperature :response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -74,7 +77,7 @@ if (loaded) {
           </ul>
           </nav>
         <WeatherData data = {weatherData} />
-          
+          <ForecastWeather code = {weatherData.icon} coordinates = {weatherData.coordinates}/>
        
       </div>
    </div>
