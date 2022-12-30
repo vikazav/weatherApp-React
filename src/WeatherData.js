@@ -15,11 +15,10 @@ export default function WeatherData(props) {
             </div>
             <div className="col-md-6 p-4 ps-5 text-start">
               <WeatherIcon code = {props.data.icon} alt = {props.data.description}/>
-{/* <img className = "icon" src ={props.data.icon} alt="weather icon"  width="100"></img> */}
+
                   <div>
                   <Temperature celsius = {Math.round(props.data.temperature)}/>
-                    {/* <span className="temp">{Math.round(props.data.temperature)}</span>
-                    <a href="/" className ="temp-icon temp-cels active-link">&#176;C   </a> <span className="oblique">   | </span><a href="/" className ="temp-icon temp-fareng">&#176;F </a> */}
+                 
                     </div>
                   <div className="row ms-1 description" >{props.data.description}</div>
                   <p className ="fs-4">Humidity: <span className="humidity">{props.data.humidity}</span>%</p>

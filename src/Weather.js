@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import axios from 'axios';
 import "./Weather.css";
 
@@ -12,7 +12,6 @@ const [loaded,setLoaded]= useState(false);
 
 
 function handleResponse(response) {
-   // console.log(response.data);
    setLoaded(true);
    
    setWeatherData({
@@ -36,14 +35,19 @@ function handleSubmit(event) {
    search()
 }
 
+
 function handleChange(event) {
    setCity(event.target.value);
    }
-   function handleClick(event) {
+
+
+
+   function handleLink(event) {
       event.preventDefault();
-      setCity(event.target.value);
-      search();
+      setCity(event.target.innerText);
+         search()
    }
+
 
 if (loaded) {
    return (
@@ -63,16 +67,16 @@ if (loaded) {
          <nav >
          <ul className="nav nav-pills mb-4">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/" onClick = {handleClick}>Kharkiv</a>
+              <a className="nav-link" aria-current="page" href="/" onClick = {handleLink}>Kharkiv</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">Lviv</a>
+              <a className="nav-link" href="/" onClick = {handleLink}>Lviv</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">Odesa</a>
+              <a className="nav-link" href="/" onClick = {handleLink}>Odesa</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">Dnipro</a>
+              <a className="nav-link" href="/" onClick = {handleLink}>Dnipro</a>
             </li>
           </ul>
           </nav>
